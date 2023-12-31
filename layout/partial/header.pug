@@ -21,20 +21,38 @@ header.page-header
             a(href=social.url)
               span(class=['iconfont', `icon-${social.name}`])
 
-// 引入 jQuery
-script(src='https://code.jquery.com/jquery-3.6.0.min.js')
+  // 添加JavaScript
+  script.
+    document.querySelectorAll('.social-item').forEach(item => {
+      // 点击事件
+      item.addEventListener('click', function(event) {
+        event.stopPropagation(); // 阻止事件冒泡到document
+        // 关闭所有其他的二维码
+        document.querySelectorAll('.social-item .qrcode').forEach(qr => {
+          if (qr !== this.querySelector('.qrcode')) {
+            qr.style.display = 'none';
+          }
+        });
+        // 切换当前点击的二维码的显示状态
+        const qrCode = this.querySelector('.qrcode');
+        qrCode.style.display = qrCode.style.display === 'block' ? 'none' : 'block';
+      });
 
-// 添加自定义脚本
-script.
-  $(document).ready(function () {
-    $('.social-item').hover(
-      function () {
-        // 鼠标悬停
-        $(this).find('.qrcode').show();
-      },
-      function () {
-        // 鼠标移开
-        $(this).find('.qrcode').hide();
+      // 悬停事件 - 仅在非触摸设备上生效
+      if (window.matchMedia('(hover: hover) and (pointer: fine)').matches) {
+        item.addEventListener('mouseenter', function() {
+          this.querySelector('.qrcode').style.display = 'block';
+        });
+        item.addEventListener('mouseleave', function() {
+          this.querySelector('.qrcode').style.display = 'none';
+        });
       }
-    );
-  });
+    });
+
+    // 监听整个文档的点击事件，用于点击空白处关闭二维码
+    document.addEventListener('click', () => {
+      document.querySelectorAll('.social-item .qrcode').forEach(qr => {
+        qr.style.display = 'none';
+      });
+    });
+
