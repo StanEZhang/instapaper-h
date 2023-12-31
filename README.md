@@ -1,10 +1,12 @@
-# hexo-theme-instapaper
+# instapaper-h
 
-仿 instapaper 的一款极简 Hexo 主题
+对 instapaper 主题的自定义修改
+
+原地址：https://github.com/techmovie/hexo-theme-instapaper
 
 ## 主题预览
 
-[Demo](https://duyu.page)
+[Demo](https://stanezhang.github.io/)
 
 ## Feature
 
@@ -21,7 +23,7 @@
 进入到自己的 Hexo 博客目录，在博客目录下拉取主题代码
 
 ```
-git clone https://github.com/techmovie/hexo-theme-instapaper.git themes/instapaper --depth=1
+git clone https://github.com/StanEZhang/instapaper-h.git themes/instapaper --depth=1
 ```
 
 在 Hexo 目录的`_config.yml`中将`theme`的值改为`instapaper`
@@ -42,12 +44,18 @@ comment:
     labels: 'gitalk'
     distractionFreeMode: true
 socialList:
-  - name: telegram
-    url: https://t.me/YOURNAME
+  - name: gongzhonghao
+    url: 公众号二维码图片链接
+  - name: qq
+    url: qq群二维码图片链接
+  - name: weixin
+    url: 个人微信号二维码图片链接
   - name: github
-    url: https://github.com/YOURNAME
-  - name: mail
-    url: mailto:YOURNAME@xx.com
+    url: https://github.com/StanEZhang
+  - name: x
+    url: https://twitter.com/zhanghaibin12
+  - name: weibo
+    url: https://weibo.com/u/5341274693
 highlight: // highlight 主题文件地址
   light: https://cdn.staticfile.org/highlight.js/11.5.0/styles/default.min.css
   dark: https://cdn.staticfile.org/highlight.js/11.5.0/styles/tokyo-night-dark.min.css
