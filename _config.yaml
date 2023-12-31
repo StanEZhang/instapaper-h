@@ -1,0 +1,29 @@
+comment:
+  gitalk:
+    enable: true
+    owner: StanEZhang
+    admin: StanEZhang
+    repo: StanEZhang.github.io
+    ClientID:
+    ClientSecret:
+    labels: 'gitalk'
+    distractionFreeMode: true
+socialList:
+  - name: gongzhonghao
+    url: https://haibin9527.gitee.io/about_me/images/saoyisao.jpg
+  - name: qq
+    url: https://haibin9527.gitee.io/about_me/images/QQgroup.png
+  - name: weixin
+    url: https://haibin9527.gitee.io/about_me/images/wechat.jpg
+  - name: github
+    url: https://github.com/StanEZhang
+  - name: x
+    url: https://twitter.com/zhanghaibin12
+  - name: weibo
+    url: https://weibo.com/u/5341274693
+highlight:
+  light: https://cdn.staticfile.org/highlight.js/11.5.0/styles/default.min.css
+  dark: https://cdn.staticfile.org/highlight.js/11.5.0/styles/tokyo-night-dark.min.css
+copyright:
+  enable: true
+  license: '本文采用<a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">知识共享署名-非商业性使用 4.0 国际许可协议</a>进行许可'

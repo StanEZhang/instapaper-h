@@ -1,0 +1,77 @@
+.page-header {
+  padding: 20px;
+  font-size: 17px;
+  padding-bottom: 60px;
+  margin: 0 auto;
+  width: 100%;
+  box-sizing: border-box;
+  nav {
+    position: relative;
+  }
+  .router-list {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+  }
+  .nav-item {
+    margin: 17px;
+    font-weight: 600;
+    a {
+      transition: all 0.35s ease-in-out;
+    }
+  }
+  .mode-switch {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    .iconfont {
+      font-size: 22px;
+      cursor: pointer;
+    }
+  }
+  .social-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 20px;
+    li {
+      height: 30px;
+      line-height: 30px;
+      margin: 0 10px;
+      cursor: pointer;
+    }
+    span {
+      font-size: 24px;
+      transition: all 0.35s ease-in-out;
+    }
+    .icon-weixin {
+      font-size: 26px;
+    }
+    .icon-gongzhonghao {
+      font-size: 26px;
+    }
+    .icon-qq {
+      font-size: 26px;
+    }
+    .icon-weibo {
+      font-size: 26px;
+    }
+    .icon-x {
+      font-size: 26px;
+    }
+    .icon-github {
+      font-size: 26px;
+    }
+    .qrcode {
+      width: 300px;
+      height: 300px;
+      display: none; /* 默认不显示，可以通过 JavaScript 控制显示 */
+      position: absolute; /* 改为绝对定位 */
+      z-index: 1000; /* 确保在其他元素之上 */
+      /* 其他样式，如边框、阴影等 */
+    }
+    
+    
+  }
+}

@@ -1,0 +1,40 @@
+header.page-header
+  nav
+    ul.router-list
+      li.nav-item 
+        a(href='/') 主页
+      li.nav-item 
+        a(href='/archives/') 归档
+      li.nav-item 
+        a(href='/atom.xml') RSS
+    .mode-switch
+      span.iconfont.icon-DarkTheme
+  if is_home() || is_archive() || is_tag()
+    ul.social-list
+      each social in theme.socialList
+        li.social-item
+          //- 悬浮图片公众号二维码/qq群二维码/个人微信号二维码  
+          if social.name == 'gongzhonghao' || social.name == 'qq' || social.name == 'weixin'
+            span(class=['iconfont', `icon-${social.name}`])
+            img.qrcode(src=social.url) 
+          else
+            a(href=social.url)
+              span(class=['iconfont', `icon-${social.name}`])
+
+// 引入 jQuery
+script(src='https://code.jquery.com/jquery-3.6.0.min.js')
+
+// 添加自定义脚本
+script.
+  $(document).ready(function () {
+    $('.social-item').hover(
+      function () {
+        // 鼠标悬停
+        $(this).find('.qrcode').show();
+      },
+      function () {
+        // 鼠标移开
+        $(this).find('.qrcode').hide();
+      }
+    );
+  });
